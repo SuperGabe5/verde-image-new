@@ -32,7 +32,32 @@ modules:
   - type: dnf
     install:
       packages:
-        - @mate-desktop
+        # Core MATE Desktop packages
+        - mate-panel
+        - mate-session-manager
+        - mate-settings-daemon
+        - mate-control-center
+        - mate-terminal
+        - mate-menu
+        - caja
+        - mate-desktop
+        - mate-backgrounds
+        - mate-applets
+        - mate-system-monitor
+        - mate-notification-daemon
+        - mate-power-manager
+        - mate-media
+        - mate-screensaver
+        - mate-sensors-applet
+
+        # MATE Applications (basic set)
+        - atril
+        - engrampa
+        - eom
+        - pluma
+        - mate-calc
+
+        # Display manager
         - lightdm
         - lightdm-gtk-greeter
         
