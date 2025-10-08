@@ -44,17 +44,14 @@ modules:
   - type: script
     scripts:
       - |
-        #!/bin/bash
         set -ouex pipefail
 
-        # Configure LightDM to start the MATE session
         mkdir -p /etc/lightdm/lightdm.conf.d
         cat > /etc/lightdm/lightdm.conf.d/50-mate.conf <<EOF
         [Seat:*]
         user-session=mate
         EOF
 
-        # Enable the LightDM service
         systemctl enable lightdm.service
 
   - type: default-flatpaks
