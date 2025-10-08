@@ -40,20 +40,6 @@ modules:
         - lightdm
         - lightdm-gtk-greeter
         
-  # Separate module for system configuration (formerly nested in `default-flatpaks`)
-  - type: script
-    scripts:
-      - |
-        set -ouex pipefail
-
-        mkdir -p /etc/lightdm/lightdm.conf.d
-        cat > /etc/lightdm/lightdm.conf.d/50-mate.conf <<EOF
-        [Seat:*]
-        user-session=mate
-        EOF
-
-        systemctl enable lightdm.service
-
   - type: default-flatpaks
     configurations:
       - notify: true
