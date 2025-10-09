@@ -28,13 +28,15 @@ modules:
         - mate-media
         - mate-screensaver
         - mate-sensors-applet
+        - marco
 
-        # MATE Applications (basic set)
+        # MATE Applications (full set)
         - atril
         - engrampa
         - eom
         - pluma
         - mate-calc
+        - mate-extra
 
         # Display manager
         - lightdm
