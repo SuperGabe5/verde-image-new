@@ -11,6 +11,8 @@ modules:
   - type: dnf
     install:
       packages:
+        - podman
+        - distrobox
         # Core MATE Desktop packages
         - mate-panel
         - mate-session-manager
@@ -30,13 +32,15 @@ modules:
         - mate-sensors-applet
         - marco
 
-        # MATE Applications (full set)
+        # MATE Applications (basic set)
         - atril
         - engrampa
         - eom
         - pluma
         - mate-calc
-        - mate-extras
+
+        # some basic gnome apps needed for some functionality
+        - gnome-software
 
         # Display manager
         - lightdm
@@ -48,7 +52,10 @@ modules:
         scope: system
         install:
           - io.gitlab.librewolf-community
+          - org.onlyoffice.desktopeditors
+          - com.github.marhkb.Pods
           - org.gnome.Loupe
+          - com.vscodium.codium
         remove:
           - org.mozilla.firefox
       - scope: user
