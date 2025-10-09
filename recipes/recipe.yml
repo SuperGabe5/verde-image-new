@@ -36,7 +36,7 @@ modules:
         - eom
         - pluma
         - mate-calc
-        - mate-extra
+        - mate-extras
 
         # Display manager
         - lightdm
