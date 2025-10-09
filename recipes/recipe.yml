@@ -14,41 +14,36 @@ modules:
         - podman
         - distrobox
         # Core MATE Desktop packages
-        #- mate-panel
-        #- mate-session-manager
-        #- mate-settings-daemon
-        #- mate-control-center
-        #- mate-terminal
-        #- mate-menu
-        #- caja
-        #- mate-desktop
-        #- mate-backgrounds
-        #- mate-applets
-        #- mate-system-monitor
-        #- mate-notification-daemon
-        #- mate-power-manager
-        #- mate-media
-        #- mate-screensaver
-        #- mate-sensors-applet
-        #- marco
+        - mate-panel
+        - mate-session-manager
+        - mate-settings-daemon
+        - mate-control-center
+        - mate-terminal
+        - mate-menu
+        - caja
+        - mate-desktop
+        - mate-backgrounds
+        - mate-applets
+        - mate-system-monitor
+        - mate-notification-daemon
+        - mate-power-manager
+        - mate-media
+        - mate-screensaver
+        - mate-sensors-applet
+        - marco
         # MATE Applications (basic set)
         #- atril
         - engrampa
         #- eom
         #- pluma
-        #- mate-calc
+        - mate-calc
         # some basic gnome apps needed for some functionality
-        #- gnome-software
+        - gnome-software
 
         # Display manager
         - lightdm
         - lightdm-gtk-greeter
-    group-packages:
-      # The correct group name for MATE on modern Fedora
-      - mate-desktop-environment
-      # Optional, for extra applications that integrate with MATE
-      - mate-applications
-        
+    
   - type: default-flatpaks
     configurations:
       - notify: true
